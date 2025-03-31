@@ -6,9 +6,15 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  width: 100vw;
-  background-color: #000;
+  min-width: 100vw;
   color: #fff;
+
+  @media (max-width: 650px) {
+    .phonePreview {
+    display: none;
+    }
+  }
+
 `;
 
 export const Content = styled.div`
@@ -74,8 +80,8 @@ export const Content = styled.div`
         height: 38px;
         width: 300px;
 
-  }
-  }
+        }
+    }
   
 
     .divider {
@@ -149,16 +155,30 @@ export const Content = styled.div`
         height: 50px;
         cursor: pointer;
       }
+
+
   }
 `;
 
 export const Footer = styled.footer`
   text-align: center;
   margin-top: 20px;
+  width: 100%;
+
+    @media (max-width: 650px) {
+      .footerLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  
+
 
   .footerLinks {
     display: flex;
     justify-content: center;
+    width: 100%;
     gap: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -182,7 +202,7 @@ export const Footer = styled.footer`
     font-size: 16px;
     height: 40px;
   }
-
+  
 
   .footerCopy {
     margin-top: 20px;
