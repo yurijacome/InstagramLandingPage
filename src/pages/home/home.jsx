@@ -1,6 +1,8 @@
 import React from 'react';
+import { FaFacebook } from "react-icons/fa";
 import { Container, Content, Footer } from './homeStyle';
 import mainImage from '../../assets/mainImage.png';
+import InstagramName from '../../assets/InstagramName.svg';
 import AppStore from '../../assets/AppStoreButton.png';
 import Microsoft from '../../assets/MicrosoftButton.png';
 
@@ -14,7 +16,7 @@ const Home = () => {
         </div>
 
         <div className="login-section">
-          <h1>Instagram</h1>
+          <img src={InstagramName} alt="Instagram" className="logo" />
           <form>
             <input type="text" placeholder="Número de telefone, nome de usuário ou email" />
             <input type="password" placeholder="Senha" />
@@ -22,7 +24,10 @@ const Home = () => {
           </form>
 
           <div className="divider">OU</div>
-          <button className="facebookLogin">Entrar com o Facebook</button>
+<button className="facebookLogin">
+  <FaFacebook style={{ fontSize: '22px', marginRight: '10px',  }} />
+  Entrar com o Facebook
+</button>
           <a href="/forgot-password" className="forgot-password">Esqueceu a senha?</a>
           
           <p className="signup">
@@ -56,8 +61,14 @@ const Home = () => {
           <a href="/">Meta Verified</a>
         </div>
 
-        <div className="footerCopy">
-        <p>© 2025 Instagram from Meta</p>
+        <div className="footerCopy"> 
+          <select className="languageSelect">
+            <option value="pt">Português(Brasil)</option>
+            <option value="en">English</option>
+            <option value="es">Españhol</option>
+            <option value="fr">Italiano</option>
+          </select>
+          <p>© 2025 Instagram from Meta</p>
         </div>
       </Footer>
 
